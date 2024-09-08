@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\teacher\TeacherLoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::get('/register',[TeacherLoginController::class,'register'])->name('teacher-register');
